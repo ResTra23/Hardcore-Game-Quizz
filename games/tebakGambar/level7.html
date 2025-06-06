@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light only">
+    <title>Level 7</title>
+    <link rel="stylesheet" href="styleTebakGambar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="pembuangan">
+        <div id="btnSubmit1" style="display: none;">test</div>
+        <div id="soalLevel2" style="display: none;">test</div>
+        <div id="jawabanUser2" style="display: none;">test</div>
+        <div id="monsterLvl5" style="display: none;">test</div>
+        <div id="hummanLvl5" style="display: none;">test</div>
+    </div>
+    <!-- INI NAVBAR -->
+    <div class="background bg-target3">
+        <div class="navbar bg-target1">
+            <div class="navbar-left">
+                <!-- <img src="https://via.placeholder.com/40" alt="Logo"> -->
+                <button class="menu" id="menuBtn">Menu</button>
+            </div>
+            <p class="navbar-center">Level 7</p>
+            <div class="navbar-right">
+                <img id="healtPoint" src="../../assets/images/HP-2.png" alt="HP" style="width: 100px;">
+            </div>
+        </div>
+    </div>
+    <!-- INI NAVBAR END -->
+    <div class="container-content">
+        <div class="soal-container bg-target2">
+            <p style="margin-top: 20px;" id="jawabanUser3">SUARA SIAPAKAH INI?</p>
+            <audio style="margin-top: 40px; filter: drop-shadow(0 0 5px black);" src="../../assets/sounds/dittolongin.mp3" controls></audio>
+            <div class="container-soal-lvl7">
+                <div class="container-btn2-soal">
+                    <button onclick="btn3Salah()">A. Adit</button>
+                    <button onclick="btn3Salah()">B. Sopo</button>
+                    <button onclick="btn3Salah()">C. Adel</button>
+                </div>
+                <div class="container-btn2-soal">
+                    <button onclick="btn3Salah()">D. Ucup</button>
+                    <button onclick="btn7Benar()">E. Dontol</button>
+                    <button onclick="btn3Salah()">F. Jarwo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="popupMenu">
+        <div class="popup-component bg-target1">
+            <span class="close" id="closeMenu">&times;</span>
+            <p class="des-popup bg-target2">MENU</p>
+            <div class="btn-menu">
+                <button class="btn-1" id="resumeBtn">RESUME</button>
+                <button class="btn-1" id="settingBtn">SETTING</button>
+                <button class="btn-1" id="quitBtn">QUIT</button>
+            </div>
+        </div>
+    </div>
+    <!-- INI POPUP SETTING -->
+    <div class="popup-setting" id="popupSetting">
+        <div class="popup-component bg-target1">
+            <span class="close" id="closeSetting">&times;</span>
+            <p class="des-popup bg-target2">SETTING</p>
+            <div class="bg-change bg-target2">
+                <p class="bg-target2">CHANGE COLOR BACKGROUND</p>
+                <div class="container-color">
+                    <div id="orange" class="color-change"></div>
+                    <div id="blue" class="color-change"></div>
+                    <div id="black" class="color-change"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- INI POPUP SETTING END -->
+
+    <div class="answer-results" id="answerResults">
+        <p>JAWABAN SALAH!! COBA LAGI</p>
+    </div>
+
+    <div class="answer-results" id="gameOver">
+        <p>GAME OVER!!</p>
+        <button class="btn-1" id="btnGameOver">RESTART</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const currentLevel = 7
+            const unlockedLevel = parseInt(localStorage.getItem("unlockedLevel") || "1")
+
+            if (unlockedLevel < currentLevel || null) {
+                alert("Kamu beleum menyelesaikan level sebelum nya")
+                location.href = "../../index.html"
+                localStorage.removeItem("HP")
+                localStorage.removeItem("unlockedLevel")
+            }
+        })
+    </script>
+    <script src="scTebakGambar.js"></script>
+</body>
+
+</html>

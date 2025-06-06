@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light only">
+    <title>Level 1</title>
+    <link rel="stylesheet" href="styleTebakGambar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- INI NAVBAR -->
+    <div class="background bg-target3">
+        <div class="navbar bg-target1">
+            <div class="navbar-left">
+                <!-- <img src="https://via.placeholder.com/40" alt="Logo"> -->
+                <button class="menu" id="menuBtn">Menu</button>
+            </div>
+            <p class="navbar-center">Level 1</p>
+            <div class="navbar-right">
+                <img id="healtPoint" src="../../assets/images/HP-2.png" alt="HP" style="width: 100px;">
+            </div>
+        </div>
+    </div>
+    <!-- INI NAVBAR END -->
+    <div class="container-content">
+        <div class="soal-container bg-target2">
+            <p>TEBAK SIAPAKAH AKU?</p>
+            <div class="soal-img">
+                <img class="img1" src="../../assets/images/kotak.png" alt="Soal Gambar 1">
+                <img class="imgPlus" src="../../assets/images/Plus.png" alt="Plus">
+                <img class="img1" src="../../assets/images/makan.png" alt="Soal Gambar 2">
+            </div>
+        </div>
+        <form class="answer-form">
+            <input type="text" class="inputText" id="jawabanUser1" placeholder="Isi Jawaban Disini......" autocomplete="off">
+            <button type="submit" class="btn-1" id="btnSubmit1">SUBMIT</button>
+        </form>
+    </div>
+    <div class="popup" id="popupMenu">
+        <div class="popup-component bg-target1">
+            <span class="close" id="closeMenu">&times;</span>
+            <p class="des-popup bg-target2">MENU</p>
+            <div class="btn-menu">
+                <button class="btn-1" id="resumeBtn">RESUME</button>
+                <button class="btn-1" id="settingBtn">SETTING</button>
+                <button class="btn-1" id="quitBtn">QUIT</button>
+            </div>
+        </div>
+    </div>
+    <!-- INI POPUP SETTING -->
+    <div class="popup-setting" id="popupSetting">
+        <div class="popup-component bg-target1">
+            <span class="close" id="closeSetting">&times;</span>
+            <p class="des-popup bg-target2">SETTING</p>
+            <div class="bg-change bg-target2">
+                <p class="bg-target2">CHANGE COLOR BACKGROUND</p>
+                <div class="container-color">
+                    <div id="orange" class="color-change"></div>
+                    <div id="blue" class="color-change"></div>
+                    <div id="black" class="color-change"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- INI POPUP SETTING END -->
+    <div class="answer-results" id="answerResults">
+        <p>JAWABAN SALAH!! COBA LAGI</p>
+    </div>
+
+    <div class="answer-results" id="gameOver">
+        <p>GAME OVER!!</p>
+        <button class="btn-1" id="btnGameOver">RESTART</button>
+    </div>
+
+    <script>
+        // const currentLevel = 2
+        // let unlockedLevel = parseInt(localStorage.getItem("unlockedLevel") || "2")
+
+        // function checkLevel() {
+        //     if (unlockedLevel < currentLevel) {
+        //         alert("Kamu beleum menyelesaikan level ebelum nya")
+        //         location.href = "../../index.html"
+        //     }
+        // }
+        // document.addEventListener("click", checkLevel)
+        // document.addEventListener("touchstart", checkLevel)
+    </script>
+    <script src="scTebakGambar.js"></script>
+</body>
+
+</html>
