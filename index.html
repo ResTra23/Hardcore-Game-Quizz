@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light only">
+    <title>HARDCORE QUIZ GAME</title>
+    <link rel="icon" href="assets/images/Hardcore-Quizz-Games-OnBG.png" type="images/png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <audio src="assets/sounds/songGameLoby.mp3" id="songLoby" muted loop>
+        Browser Anda tidak mendukung audio tag.
+    </audio>
+    <div class="background bg-target3" id="background">
+        <img src="assets/images/JOY.png" alt="Secret Answer" class="secret-JOY" id="secretJOY">
+        <div class="popup0" id="popupSecret">
+            <div class="popup-component bg-target1">
+                <span class="close0" id="closeSecret">&times;</span>
+                <p class="selectGame bg-target2">Secret Answer</p>
+                <div class="container-pw bg-target2">
+                    <p class="title-pw">PASSWORD</p>
+                    <p id="password9">HIDUP JOKOWI</p>
+                    <button class="btn-1" onclick="btnCopy()">SALIN</button>
+                </div>
+            </div>
+        </div>
+
+        <header class="nav">
+            <img src="assets/images/profilKosong.png" alt="Login Admin" role="button" id="loginAdmin">
+        </header>
+
+        <div class="container-1 bg-target1" id="menu">
+            <img src="assets/images/Hardcore-Quizz-Games-NoBG.png" alt="Hardcore Quizz Games">
+            <video src="assets/images/joyDance.mp4" autoplay loop></video>
+            <div class="container-btn">
+                <button class="btn-1" id="playBtn">PLAY</button>
+                <button class="btn-1" id="settingBtn">SETTING</button>
+                <button class="btn-1" id="adminBtn" style="display: none;"">ADMIN</button>
+                <button class=" btn-1" id="aboutBtn">ABOUT</button>
+            </div>
+        </div>
+    </div>
+    <!-- POPUP PLAY BUTTON -->
+    <div class="popup0" id="popupPlay">
+        <div class="popup-component bg-target1">
+            <span class="close0" id="closePlay">&times;</span>
+            <p class="selectGame bg-target2">SELECT GAMES</p>
+            <div class="games bg-target2">
+                <img src="assets/images/TebakanAbsurd.png" alt="GameTebakGambar">
+                <div class="text-component">
+                    <p class="fAtas">ABSURD GUESS</p>
+                    <a class="fBawah" id="game1">Click To Open</a>
+                </div>
+            </div>
+            <div class="games bg-target2">
+                <img src="#" alt="COMING SOOON">
+                <div class="text-component">
+                    <p class="fAtas">COMING SOON</p>
+                    <a class="fBawah" id="game2">Click To Open</a>
+                </div>
+            </div>
+            <div class="games bg-target2">
+                <img src="" alt="COMING SOON">
+                <div class="text-component">
+                    <p class="fAtas">COMING SOON</p>
+                    <a class="fBawah" id="game3">Click To Open</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- POPUP PLAY BUTTON END -->
+    <!-- POPUP SETTING BUTTON -->
+    <div class="popup0" id="popupSetting">
+        <div class="popup-component bg-target1">
+            <span class="close0" id="closeSetting">&times;</span>
+            <p class="selectGame bg-target2">SETTING</p>
+            <div class="bg-change bg-target2">
+                <p class="bg-target2">CHANGE COLOR BACKGROUND</p>
+                <div class="container-color">
+                    <div id="orange" class="color-change"></div>
+                    <div id="blue" class="color-change"></div>
+                    <div id="black" class="color-change"></div>
+                </div>
+            </div>
+            <div class="setting-audio bg-target2">
+                <p class="bg-target2">AUDIO</p>
+                <div class="container-audio">
+                    <div class="warper-audio">
+                        <p>SONG</p>
+                        <div class="song" id="settingSong"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- POPUP SETTING BUTTON END -->
+    <!-- POPUP ADMIN -->
+    <div class="popup0" id="popupAdmin">
+        <div class="popup-component bg-target1">
+            <span class="close0" id="closeAdmin">&times;</span>
+            <p class="selectGame bg-target2">ADMIN</p>
+            <div class="adminLvl bg-target2">
+                <button class="btn-1" onclick="location.href = ('games/tebakGambar/level1.html')">LEVEL 1</button>
+                <button class="btn-1" onclick="location.href = ('games/tebakGambar/level2.html')">LEVEL 2</button>
+                <button class="btn-1" onclick="location.href = ('games/tebakGambar/level3.html')">LEVEL 3</button>
+                <button class="btn-1" onclick="location.href = ('games/tebakGambar/level4.html')">LEVEL 4</button>
+                <button class="btn-1" onclick="location.href = ('games/tebakGambar/level5.html')">LEVEL 5</button>
+                <button class="btn-1" onclick="location.href = ('games/tebakGambar/level6.html')">LEVEL 6</button>
+                <button class="btn-1" onclick="location.href = ('games/tebakGambar/level7.html')">LEVEL 7</button>
+                <button class="btn-1" onclick="location.href = ('games/tebakGambar/level8.html')">LEVEL 8</button>
+                <button class="btn-1" onclick="location.href = ('games/tebakGambar/level9.html')">LEVEL 9</button>
+                <button class="btn-1" onclick="location.href = ('games/tebakGambar/level10.html')">LEVEL 10</button>
+            </div>
+        </div>
+    </div>
+    <div class="popup0" id="popupLAdmin">
+        <div class="popup-component bg-target1">
+            <span class="close0" id="closeLAdmin">&times;</span>
+            <p class="selectGame bg-target2">LOGIN ADMIN</p>
+            <div class="container-AkunAdmin1 bg-target1" id="tableAdmin1">
+                <input type="text" placeholder="Username" autocomplete="off" id="userName">
+                <input type="password" placeholder="Password" autocomplete="off" id="password">
+                <button class="btn-1" id="submitAkun">SUBMIT</button>
+            </div>
+            <div class="container-AkunAdmin2" id="tableAdmin2">
+                <p>ANDA SUDAH LOGIN MENGGUNAKAN AKUN ADMIN</p>
+                <button class="btn-1" onclick="logOut()">LOG OUT</button>
+            </div>
+        </div>
+    </div>
+    <!-- POPUP ADMIN END -->
+    <!-- POPUP AKUN  -->
+    <div class="popup0" id="popupAkun">
+        <div class="popup-component bg-target1">
+            <p class="selectGame bg-target2">PLAYER</p>
+            <div class="container-pw bg-target2">
+                <p>MASUKAN NAMA PENGGUNA</p>
+                <input type="text" id="inputAkun" placeholder="MASUKAN NAMA....." autocomplete="off">
+                <p id="warningAkun" style="display: none; color: red; font-size: 14px;">(NAMA TIDAK BOLEH KOSONG)</p>
+                <button onclick="simpanAkun()" class="btn-1">SUBMIT</button>
+            </div>
+        </div>
+    </div>
+    <!-- POPUP AKUN END -->
+    <!-- POPUP ABOUT BUTTON -->
+    <div class="popup0" id="popupAbout">
+        <div class="popup-component bg-target1">
+            <span class="close0" id="closeAbout">&times;</span>
+            <p class="selectGame bg-target2">ABOUT THIS GAME</p>
+            <div class="description bg-target2">
+                <p>
+                    Selamat datang di HARDCORE QUIZ GAME<br><br>
+
+                    Web ini dibuat sebagai proyek iseng tapi penuh semangat dari dua orang yang punya passion di dunia
+                    teknologi dan game.<br><br>
+
+                <p style="font-size: 20px; margin-bottom: 1px; text-decoration: underline white;">ResTra23</p>
+                bertanggung jawab sebagai programer utama, yang membangun sistem dan logika game ini.<br><br>
+
+                <p style="font-size: 20px; margin-bottom: 1px; text-decoration: underline white;">Joy (Nama Samaran)</p>
+                adalah otak di balik ide-ide game yang unik dan seru, membawa konsep menjadi pengalaman bermain yang
+                menyenangkan. <br><br>
+
+                Kami berharap kamu bisa menikmati bermain di sini seperti halnya kami menikmati proses
+                pembuatannya.<br><br>
+
+                Terimakasih.
+                </p>
+            </div>
+
+            <div class="donateMe bg-target2">
+                <p>DUKUNG KAMI<br>👇🏻 👇🏼 👇🏽 👇🏾 👇🏿</p>
+                <button class="btn-1" style="padding: 5px 30px;" onclick="goTako()">DUKUNG KAMI</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- POPUP ABOUT BUTTON END -->
+    <!-- https://colorhunt.co/palette/3a59d13d90d77ac6d2b5fccd -->
+    <script src="script.js"></script>
+</body>
+
+</html>
