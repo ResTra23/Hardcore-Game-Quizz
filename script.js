@@ -18,7 +18,7 @@ window.onload = function () {
             JOY.classList.add("hide-JOY")
             popupJoyShow = false
         }, 10000);
-    }, 27000);
+    }, 40000);
 }
 
 const akun = localStorage.getItem("akun")
@@ -199,7 +199,7 @@ function showJoy() {
             JOY.classList.add("hide-JOY")
             popupJoyShow = false
         }, 10000);
-    }, 20000);
+    }, 40000);
 }
 
 document.addEventListener("click", showJoy)
